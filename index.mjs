@@ -1,6 +1,9 @@
 import readline from "node:readline";
 import { stdin, stdout } from "node:process";
 
+/**
+ * Main function
+ */
 async function run() {
   try {
     const userInput = await getUserInput();
@@ -37,6 +40,10 @@ async function run() {
   }
 }
 
+/**
+ * Read user input from keyboard, validate it and return as a number
+ * @returns {Promise<number>}
+ */
 function getUserInput() {
   const rl = readline.createInterface({ input: stdin, output: stdout });
 
@@ -45,7 +52,7 @@ function getUserInput() {
       const isValid = validateUserInput(answer);
 
       if (isValid) {
-        return resolve(answer);
+        return resolve(parseInt(answer));
       }
 
       return reject("Invalid input data");
@@ -53,6 +60,11 @@ function getUserInput() {
   });
 }
 
+/**
+ * Validates input string.
+ * @param {string} input Raw input string.
+ * @returns {boolean} `true` if validation passed, `false` if it did not.
+ */
 function validateUserInput(input) {
   if (isNaN(parseInt(input))) {
     return false;
