@@ -1,0 +1,16 @@
+{
+  "name": "bytebuzz-001",
+  "version": "1.0.0",
+  "description": "Weekly Dev Circle Challenge - ByteBuzz",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-devilish-frog-8852:DevilishFrog8852/ByteBuzz.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.mjs"
+  }
+}
